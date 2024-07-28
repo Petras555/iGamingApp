@@ -3,6 +3,7 @@ from database import db_query, connection
 import datetime
 
 
+# function to check username within database for authentication
 def username_check():
     all_usernames_db = "SELECT Username FROM Clients"
     all_usernames = []
@@ -12,7 +13,7 @@ def username_check():
         all_usernames.append(y)
     return all_usernames
 
-
+#function to check password within database for authentication
 def password_check(username):
     password_in_db = None
     password_search = f"SELECT * FROM Clients WHERE Username = '{username}'"
@@ -20,27 +21,27 @@ def password_check(username):
         password_in_db = i[2]
     return password_in_db
 
-
+#Account creation function which adds new account within database
 def create_account():
     client_id = 1
 
     all_client_ids_db = "SELECT ClientID FROM Clients"
     all_client_ids = []
 
-    for x in db_query(connection, all_client_ids_db):
+    for x in db_query(connection, all_client_ids_db): #Check for all account IDs in database
         y = x[0]
         all_client_ids.append(y)
 
-    while client_id in all_client_ids:
+    while client_id in all_client_ids: #Check for unique account ID
         client_id += 1
 
     print(f"Your client ID is {client_id}")
 
-    username = input("Please insert username")
+    username = input("Please insert username: ")
     while username in username_check():
-        username = input("Username already exists. Please insert different username")
+        username = input("Username already exists. Please insert different username: ")
 
-    password = input("Please insert password")
+    password = input("Please insert password: ")
 
     client = Client(client_id, username, password)
     print(f"Account created with username: {username} and password: {password}")
@@ -51,23 +52,23 @@ def create_account():
     db_query(connection, add_account_query, account_data)
     connection.commit()
 
-
+#Function for making deposit within database
 def make_deposit():
     print("In order to make a deposit, please log into your account")
-    username = input("Please insert username")
+    username = input("Please insert username: ")     #Authentication
     while username not in username_check():
-        username = input("Invalid username. Please insert correct username")
+        username = input("Invalid username. Please insert correct username: ")
     print("Username correct")
 
-    password = input("Please insert password")
+    password = input("Please insert password: ")
 
     while password != password_check(username):
-        password = input("Invalid Password. Please insert password once again:")
+        password = input("Invalid Password. Please insert password once again: ")
 
     for i in range(20):
 
         try:
-            deposit = int(input("Please enter amount you would like to deposit:"))
+            deposit = int(input("Please enter amount you would like to deposit: "))
             if deposit == 0:
                 print("0 value is not available")
                 continue
@@ -82,18 +83,18 @@ def make_deposit():
     db_query(connection, add_transaction_query, transaction_data)
     connection.commit()
 
-
+#Function for making withdrawal within database
 def withdraw_funds():
     print("In order to make a withdrawal, please log into your account")
-    username = input("Please insert username")
+    username = input("Please insert username: ")
     while username not in username_check():
-        username = input("Invalid username. Please insert correct username")
+        username = input("Invalid username. Please insert correct username: ")
     print("Username correct")
 
-    password = input("Please insert password")
+    password = input("Please insert password: ")
 
     while password != password_check(username):
-        password = input("Invalid Password. Please insert password once again:")
+        password = input("Invalid Password. Please insert password once again: ")
 
     all_transactions = f"SELECT * FROM Transactions WHERE Username = '{username}'"
     total_balance = 0
@@ -105,11 +106,11 @@ def withdraw_funds():
     for i in range(20):
 
         try:
-            withdrawal = int(input("Please enter amount you would like to withdraw:"))
+            withdrawal = int(input("Please enter amount you would like to withdraw: "))
             if withdrawal == 0:
                 print("0 value is not available")
                 continue
-            elif withdrawal > total_balance:
+            elif withdrawal > total_balance:   #Check if there are enough funds for withdrawal
                 print("Not enough funds in balance for withdrawal")
                 continue
         except:
@@ -125,7 +126,7 @@ def withdraw_funds():
     db_query(connection, add_transaction_query, transaction_data)
     connection.commit()
 
-
+#Function for listing all accounts
 def list_all_accounts():
     list_accounts = "SELECT * FROM Clients"
 
@@ -157,13 +158,13 @@ def handle_choice(choice):
         print("Listing data...")
         list_all_accounts()
     elif choice == "5":
-        print("Exiting the program.")
+        print("Calculating balance.")
     elif choice == "6":
         print("Exiting the program.")
         quit()
 
     else:
-        print("Invalid choice. Please select 1, 2, or 3.")
+        print("Invalid choice. Please select again")
 
 
 if __name__ == "__main__":

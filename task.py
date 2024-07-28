@@ -43,26 +43,26 @@ def main_menu():
 
 def handle_choice(choice):
     if choice == "1":
-        print("Saving data...")
+        print("Task number 1")
         users_with_3_deposits()
     elif choice == "2":
-        print("Loading data...")
+        print("Task number 2")
         user_with_1_withdrawal()
     elif choice == "3":
-        print("Loading data...")
+        print("Task number 3")
         top3_deposited_users()
     elif choice == "4":
-        print("Loading data...")
+        print("Task number 4")
         list_all_deposits()
     elif choice == "5":
-        print("Exiting the program.")
+        print("Task number 5")
         calculate_balance()
     elif choice == "6":
         print("Exiting the program.")
         quit()
 
     else:
-        print("Invalid choice. Please select 1, 2, or 3.")
+        print("Invalid choice. Please select again.")
 
 
 if __name__ == "__main__":
