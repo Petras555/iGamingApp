@@ -69,10 +69,6 @@ Write the build Instruction here.
 ### Deployment
 Write the deployment instruction here.
 
-## Community
-
-If it's open-source, talk about the community here, ask social media links and other links.
-
 ### Contribution
 
  Your contributions are always welcome and appreciated. Following are the things you can do to contribute to this project.
@@ -88,27 +84,6 @@ If it's open-source, talk about the community here, ask social media links and o
 
  > If you are new to open-source, make sure to check read more about it [here](https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-source) and learn more about creating a pull request [here](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github).
 
-
-### Branches
-
- I use an agile continuous integration methodology, so the version is frequently updated and development is really fast.
-
-1. **`stage`** is the development branch.
-
-2. **`master`** is the production branch.
-
-3. No other permanent branches should be created in the main repository, you can create feature branches but they should get merged with the master.
-
-**Steps to work with feature branch**
-
-1. To start working on a new feature, create a new branch prefixed with `feat` and followed by feature name. (ie. `feat-FEATURE-NAME`)
-2. Once you are done with your changes, you can raise PR.
-
-**Steps to create a pull request**
-
-1. Make a PR to `stage` branch.
-2. Comply with the best practices and guidelines e.g. where the PR concerns visual elements it should have an image showing the effect.
-3. It must pass all continuous integration checks and get positive reviews.
 
 After this, changes will be merged.
 
