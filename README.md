@@ -36,6 +36,7 @@ Simple iGaming "application" which connects to MySQL database where user can cre
 
 ### Requirements 
 Python 3
+
 MySQL Database (Workbench preferred)
 
 
