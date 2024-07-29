@@ -1,7 +1,6 @@
 # Introduction
-- Add your project logo.
-- Write a short introduction to the project.
-- If you are using badges, add them here.
+![image](https://github.com/user-attachments/assets/7b9a2154-a3b4-4fac-a395-ed2e724d3a10)
+
 
 ## Index
 
@@ -32,12 +31,12 @@ Simple iGaming "application" which connects to MySQL database where user can cre
 | No | File Name | Details 
 |----|------------|-------|
 | 1  | launcher.py      | a file which should be firstly used by user to navigate through project.
-| 1  | createdatabase.py| file creates database and mandatory tables within database (1st selection within launcher.py).
-| 1  | database.py      | has functions for connecting to database, which are used in other scripts.
-| 1  | gamemenu.py      | game file for creating accounts, doing deposits and withdrawals, and checking list of all accounts within database(2nd selection within launcher.py).
-| 1  | task.py          | file for operatings tasks from [About](#about) section. (3rd selection within launcher.py).
-| 1  | classes.py       | separate file for classes, currently contains single class for user.
-| 1  | requirements.txt | file for installing dependencies.
+| 2  | createdatabase.py| file creates database and mandatory tables within database (1st selection within launcher.py).
+| 3  | database.py      | has functions for connecting to database, which are used in other scripts.
+| 4  | gamemenu.py      | game file for creating accounts, doing deposits and withdrawals, and checking list of all accounts within database(2nd selection within launcher.py).
+| 5  | task.py          | file for operatings tasks from [About](#about) section. (3rd selection within launcher.py).
+| 6  | classes.py       | separate file for classes, currently contains single class for user.
+| 7  | requirements.txt | file for installing dependencies.
 
 ### Requirements 
 Python 3
