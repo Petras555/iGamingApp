@@ -53,6 +53,11 @@ MySQL Database (Workbench preferred)
   * https://dev.mysql.com/downloads/mysql/ (Mac) https://dev.mysql.com/downloads/workbench/ (Workbench for Mac)
     
 - Create connection within database
+`  *Make sure that connection settings are
+            host="Localhost",
+            user="root",
+            password="root",
+    Otherwise, these details should be altered in createdatabase.py and database.py files         
   
 - Install requirements.txt (or just install mysql-connector-python library)
   
