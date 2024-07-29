@@ -6,14 +6,10 @@
 ## Index
 
 - [About](#about)
-- [Usage](#usage)
-- [Installation](#installation)
-  - [Commands](#commands)
-- [Development](#development)
-  - [Requirements](#Requirements)
-  - [Developmen Environment](#development-environment)
 - [File Structure](#file-structure)
- 
+- [Requirements](#Requirements)
+- [Instructions](#Instructions)
+- [Author](#Author)
 
 
 ## About
@@ -33,7 +29,7 @@ Simple iGaming "application" which connects to MySQL database where user can cre
 | 1  | launcher.py      | a file which should be firstly used by user to navigate through project.
 | 1  | createdatabase.py| file creates database and mandatory tables within database (1st selection within launcher.py).
 | 1  | database.py      | has functions for connecting to database, which are used in other scripts.
-| 1  | gamemenu.py      | game file for creating accounts, doing deposits and withdrawals, and checking list of all accounts                           within database(2nd selection within launcher.py).
+| 1  | gamemenu.py      | game file for creating accounts, doing deposits and withdrawals, and checking list of all accounts within database(2nd selection within launcher.py).
 | 1  | task.py          | file for operatings tasks from [About](#about) section. (3rd selection within launcher.py).
 | 1  | classes.py       | separate file for classes, currently contains single class for user.
 | 1  | requirements.txt | file for installing dependencies.
@@ -42,7 +38,6 @@ Simple iGaming "application" which connects to MySQL database where user can cre
 Python 3
 MySQL Database (Workbench preferred)
 
-```
 
 ### Instructions
 - MySQL database is mandatory. It can be downloaded via: 
@@ -54,8 +49,6 @@ MySQL Database (Workbench preferred)
 - Select 1st option of launcher.py menu (it has to be done only once)
 - Restart launcher.py and select 2 option for opening game file, there you can create accounts, make deposits/withdrawals for creating data
 - Once data is built, restart launcher and select 3 options for operating task in MySQL database with generated data.
-
-```
 
 
 
