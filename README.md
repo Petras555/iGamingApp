@@ -53,8 +53,8 @@ MySQL Database (Workbench preferred)
   * https://dev.mysql.com/downloads/mysql/ (Mac) https://dev.mysql.com/downloads/workbench/ (Workbench for Mac)
     
 - Create connection within database
-- 
-`  *Make sure that connection settings are:
+  
+- Make sure that connection settings are:
 
             host="Localhost",
   
