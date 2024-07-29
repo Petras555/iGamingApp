@@ -16,10 +16,15 @@
 Simple iGaming "application" which connects to MySQL database where user can create accounts and make transactions with them to virtual wallet. Database holds information about every account(userID, username, password) and every transaction that was made with each account(transaction ID, username, amount, transaction type:deposit or withdrawal and date). The project allows to build data within database which could be used for following tasks:
 
 *List all users having 3 deposits or more
+
 *List all users having only 1 withdrawal
+
 *List 3 users that have made the highest deposits
+
 *List all deposits for users. Display UserId, UserName, DepositDate, DepositAmount
+
 *Calculate balances of all users
+
 
 ### File Structure
 
@@ -41,17 +46,26 @@ MySQL Database (Workbench preferred)
 
 
 ### Instructions
-- MySQL database is mandatory. It can be downloaded via: 
+- MySQL database is mandatory. It can be downloaded via:
+  
   * https://dev.mysql.com/downloads/workbench/ (Windows)
+    
   * https://dev.mysql.com/downloads/mysql/ (Mac) https://dev.mysql.com/downloads/workbench/ (Workbench for Mac)
+    
 - Create connection within database
+  
 - Install requirements.txt (or just install mysql-connector-python library)
+  
 - After pulling project to device, launch it with launcher.py
+ 
 - Select 1st option of launcher.py menu (it has to be done only once)
+  
 - Restart launcher.py and select 2 option for opening game file, there you can create accounts, make deposits/withdrawals for creating data
+  
 - Once data is built, restart launcher and select 3 options for operating task in MySQL database with generated data.
 
 
 
 ### Author
+
 Petras Narijauskas
